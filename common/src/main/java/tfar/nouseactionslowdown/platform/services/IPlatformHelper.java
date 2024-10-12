@@ -1,4 +1,6 @@
-package com.example.examplemod.platform.services;
+package tfar.nouseactionslowdown.platform.services;
+
+import tfar.nouseactionslowdown.platform.MLConfig;
 
 public interface IPlatformHelper {
 
@@ -33,4 +35,6 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    MLConfig getConfig();
 }

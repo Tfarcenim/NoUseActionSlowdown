@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package tfar.nouseactionslowdown.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import tfar.nouseactionslowdown.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {
@@ -20,5 +20,10 @@ public class FabricPlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return FabricLoader.getInstance().isDevelopmentEnvironment();
+    }
+
+    @Override
+    public MLConfig getConfig() {
+        return null;
     }
 }

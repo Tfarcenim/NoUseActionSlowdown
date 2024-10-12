@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package tfar.nouseactionslowdown;
 
 import net.fabricmc.api.ModInitializer;
 
@@ -12,7 +12,7 @@ public class ExampleMod implements ModInitializer {
         // project.
 
         // Use Fabric to bootstrap the Common mod.
-        CommonClass.LOG.info("Hello Fabric world!");
-        CommonClass.init();
+        NoUseActionSlowdown.LOG.info("Hello Fabric world!");
+        NoUseActionSlowdown.init();
     }
 }

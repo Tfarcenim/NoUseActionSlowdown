@@ -1,11 +1,12 @@
-package com.example.examplemod.platform;
+package tfar.nouseactionslowdown.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import tfar.nouseactionslowdown.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 
 public class ForgePlatformHelper implements IPlatformHelper {
 
+    MLConfig config = new TomlConfig();
     @Override
     public String getPlatformName() {
 
@@ -22,5 +23,10 @@ public class ForgePlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return !FMLLoader.isProduction();
+    }
+
+    @Override
+    public MLConfig getConfig() {
+        return config;
     }
 }
